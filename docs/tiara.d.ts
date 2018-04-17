@@ -1,4 +1,4 @@
-declare namespace Tiara {
+declare module Tiara {
     class Style {
         selector: string;
         private style;
@@ -34,4 +34,7 @@ declare namespace Tiara {
         getCloneNode(deep?: boolean): DocumentFragment;
         renderTemplate(target: HTMLElement): void;
     }
+}
+declare module "node/index" {
+    export = Tiara;
 }

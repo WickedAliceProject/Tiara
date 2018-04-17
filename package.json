@@ -5,7 +5,8 @@
   "main": "./docs/tiara.js",
   "types": "./docs/tiara.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p src/node",
+    "site": "tsc -p src/site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hiroki",
