@@ -1,0 +1,14 @@
+{
+  "name": "tiara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./docs/tiara.js",
+  "types": "./docs/tiara.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hiroki",
+  "license": "MIT",
+  "devDependencies": {}
+}
