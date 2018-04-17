@@ -1,1 +1,3 @@
-/// <reference path="../Tiara.ts" />
+/// <reference path="../tiara.ts" />
+
+(<any>window).Tiara = tiara;

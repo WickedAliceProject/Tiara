@@ -5,7 +5,7 @@
   "main": "./docs/tiara.js",
   "types": "./docs/tiara.d.ts",
   "scripts": {
-    "build": "tsc -p src/node",
+    "build": "tsc -p src",
     "site": "tsc -p src/site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

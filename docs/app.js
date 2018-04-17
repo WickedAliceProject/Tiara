@@ -1,5 +1,5 @@
-var Tiara;
-(function (Tiara) {
+var tiara;
+(function (tiara) {
     function ConvertLower(c) { return '-' + String.fromCharCode(c.charCodeAt(0) | 32); }
     class Style {
         constructor(selector) {
@@ -110,7 +110,7 @@ var Tiara;
             return this.element;
         }
     }
-    Tiara.Style = Style;
+    tiara.Style = Style;
     function CreateTemplateElement(contents) {
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
@@ -125,7 +125,7 @@ var Tiara;
         }
         return template;
     }
-    Tiara.CreateTemplateElement = CreateTemplateElement;
+    tiara.CreateTemplateElement = CreateTemplateElement;
     class Template {
         constructor(template) {
             this.setTemplate(template);
@@ -181,5 +181,6 @@ var Tiara;
             target.appendChild(this.getCloneNode());
         }
     }
-    Tiara.Template = Template;
-})(Tiara || (Tiara = {}));
+    tiara.Template = Template;
+})(tiara || (tiara = {}));
+window.Tiara = tiara;

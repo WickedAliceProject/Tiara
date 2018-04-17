@@ -12,6 +12,6 @@
 		"declaration": true
 	},
 	"include": [
-		"./Tiara.ts"
+		"./tiara.ts"
 	]
 }
