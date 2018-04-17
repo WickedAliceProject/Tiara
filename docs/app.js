@@ -115,7 +115,7 @@ var TiaraLib;
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
             template.content.appendChild(contents);
-            return;
+            return template;
         }
         const parent = document.createElement('div');
         parent.innerHTML = contents;

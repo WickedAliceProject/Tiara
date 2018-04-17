@@ -172,7 +172,7 @@ module TiaraLib
 		if ( typeof contents !== 'string' )
 		{
 			template.content.appendChild( contents );
-			return;
+			return template;
 		}
 
 		const parent = document.createElement( 'div' );

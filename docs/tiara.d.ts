@@ -19,7 +19,7 @@ declare module TiaraLib {
         toStoring(selector?: string): string;
         private reflectStyleSheet();
     }
-    function CreateTemplateElement(contents: HTMLElement | string): HTMLTemplateElement | undefined;
+    function CreateTemplateElement(contents: HTMLElement | string): HTMLTemplateElement;
     class Template {
         static create(contents: HTMLElement | string): Template;
         protected template: HTMLTemplateElement;
