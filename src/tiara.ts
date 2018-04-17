@@ -1,4 +1,4 @@
-namespace tiara
+module tiara
 {
 	function ConvertLower( c: string ) { return '-' + String.fromCharCode( c.charCodeAt( 0 ) | 32 ); }
 

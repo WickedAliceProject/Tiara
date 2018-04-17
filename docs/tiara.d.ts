@@ -1,4 +1,4 @@
-declare namespace tiara {
+declare module tiara {
     class Style {
         selector: string;
         private style;
