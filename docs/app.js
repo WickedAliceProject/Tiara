@@ -1,5 +1,5 @@
-var tiara;
-(function (tiara) {
+var TiaraLib;
+(function (TiaraLib) {
     function ConvertLower(c) { return '-' + String.fromCharCode(c.charCodeAt(0) | 32); }
     class Style {
         constructor(selector) {
@@ -110,7 +110,7 @@ var tiara;
             return this.element;
         }
     }
-    tiara.Style = Style;
+    TiaraLib.Style = Style;
     function CreateTemplateElement(contents) {
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
@@ -125,7 +125,7 @@ var tiara;
         }
         return template;
     }
-    tiara.CreateTemplateElement = CreateTemplateElement;
+    TiaraLib.CreateTemplateElement = CreateTemplateElement;
     class Template {
         constructor(template) {
             this.setTemplate(template);
@@ -181,6 +181,6 @@ var tiara;
             target.appendChild(this.getCloneNode());
         }
     }
-    tiara.Template = Template;
-})(tiara || (tiara = {}));
-window.Tiara = tiara;
+    TiaraLib.Template = Template;
+})(TiaraLib || (TiaraLib = {}));
+window.Tiara = TiaraLib;

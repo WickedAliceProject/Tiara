@@ -1,4 +1,4 @@
-declare module tiara {
+declare module TiaraLib {
     class Style {
         selector: string;
         private style;
@@ -34,4 +34,7 @@ declare module tiara {
         getCloneNode(deep?: boolean): DocumentFragment;
         renderTemplate(target: HTMLElement): void;
     }
+}
+declare module "tiara" {
+    export const tiara: typeof TiaraLib;
 }
