@@ -1,3 +1,3 @@
 /// <reference path="../TiaraLib.ts" />
 
-(<any>window).Tiara = TiaraLib;
+(<any>window).Tiara = Tiara;

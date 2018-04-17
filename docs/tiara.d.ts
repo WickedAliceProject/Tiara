@@ -1,4 +1,4 @@
-declare module TiaraLib {
+declare module Tiara {
     class Style {
         selector: string;
         private style;
@@ -36,5 +36,5 @@ declare module TiaraLib {
     }
 }
 declare module "tiara" {
-    export = TiaraLib;
+    export = Tiara;
 }

@@ -1,3 +1,3 @@
 /// <reference path="./TiaraLib.ts" />
 
-export = TiaraLib;
+export = Tiara;
