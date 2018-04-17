@@ -36,5 +36,5 @@ declare module TiaraLib {
     }
 }
 declare module "tiara" {
-    export const tiara: typeof TiaraLib;
+    export = TiaraLib;
 }
