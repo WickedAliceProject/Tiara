@@ -35,6 +35,3 @@ declare module Tiara {
         renderTemplate(target: HTMLElement): void;
     }
 }
-declare module "node/index" {
-    export = Tiara;
-}

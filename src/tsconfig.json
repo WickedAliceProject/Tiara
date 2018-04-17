@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"outFile": "../../docs/tiara.js",
+		"outFile": "../docs/tiara.js",
 		"module": "amd",
 		"target": "es6",
 		"moduleResolution": "node",
@@ -12,6 +12,6 @@
 		"declaration": true
 	},
 	"include": [
-		"./index.ts"
+		"./Tiara.ts"
 	]
 }

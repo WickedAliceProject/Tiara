@@ -183,7 +183,3 @@ var Tiara;
     }
     Tiara.Template = Template;
 })(Tiara || (Tiara = {}));
-define("node/index", ["require", "exports"], function (require, exports) {
-    "use strict";
-    return Tiara;
-});
