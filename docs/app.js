@@ -1,4 +1,3 @@
-function ConvertLower(c) { return '-' + String.fromCharCode(c.charCodeAt(0) | 32); }
 class Tiara {
     static createTemplateElement(contents) {
         const template = document.createElement('template');

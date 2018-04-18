@@ -1,4 +1,3 @@
-declare function ConvertLower(c: string): string;
 declare class Tiara {
     static createTemplateElement(contents: HTMLElement | string): HTMLTemplateElement;
     static create(contents: HTMLElement | string): Tiara;
