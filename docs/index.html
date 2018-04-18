@@ -6,29 +6,15 @@
 	<meta name="description" content="">
 	<script type="text/javascript" src="./app.js?1"></script>
 	<script type="text/javascript">
-class Tmp extends Tiara.Template
+class Tmp extends Tiara
 {
 	constructor()
 	{
 		super();
-		const tstyle = new Tiara.Style( '.myTemplate' );
-		tstyle.set( 'textAlign', 'center' );
-		tstyle.add( 'span a' ).set('textDecoration','none');
-		tstyle.add( 'span' ).set( 'fontSize', '0.8em' );
-		console.log( tstyle.rules );
-		tstyle.reflectStyleSheet();
 	}
 	defaultTemplate()
 	{
-		/*const template = document.createElement( 'template' );
-
-		const div = document.createElement( 'div' );
-		div.textContent = 'test';
-		div.classList.add( 'myTemplate' );
-		template.content.appendChild( div );
-
-		return template;*/
-		return Tiara.CreateTemplateElement( '<div class="myTemplate">test</div>' );
+		return Tiara.createTemplateElement( '<div class="myTemplate">test</div>' );
 	}
 }
 
@@ -36,15 +22,6 @@ document.addEventListener( 'DOMContentLoaded', () =>
 {
 	const tmp = new Tmp();
 	tmp.renderTemplate(document.getElementById('contnts'));
-
-
-	/*const template = new Tiara.Template();
-	template.setTemplateContent( '<div>test</div>' );
-	const div = document.createElement( 'div' );
-	div.textContent = 'test';
-	template.setTemplateContent( div );
-	console.log( template.getContent() );
-	template.renderTemplate(document.getElementById('contnts'));*/
 } );
 	</script>
 </head>
