@@ -14,9 +14,10 @@ class Tiara
 		const parent = document.createElement( 'div' );
 		parent.innerHTML = contents;
 		const children = parent.children;
-		for ( let i = 0 ; i < children.length ; ++i )
+		const length = children.length;
+		for ( let i = 0 ; i < length ; ++i )
 		{
-			template.content.appendChild( children[ i ] );
+			template.content.appendChild( children[ 0 ] );
 		}
 
 		return template;
