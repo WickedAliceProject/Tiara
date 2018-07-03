@@ -3,8 +3,8 @@ class Tiara {
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
             if (Object.prototype.toString.call(contents) === "[object HTMLCollection]") {
-                for (let i = 0; i < contents.length; ++i) {
-                    template.content.appendChild(contents[i]);
+                while (0 < contents.length) {
+                    template.content.appendChild(contents[0]);
                 }
             }
             else {

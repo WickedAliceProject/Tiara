@@ -9,9 +9,9 @@ class Tiara
 		{
 			if ( Object.prototype.toString.call( contents ) === "[object HTMLCollection]" )
 			{
-				for ( let i = 0 ; i < (<HTMLCollection>contents).length ; ++i )
+				while ( 0 < (<HTMLCollection>contents).length )
 				{
-					template.content.appendChild( (<HTMLCollection>contents)[ i ] );
+					template.content.appendChild( (<HTMLCollection>contents)[ 0 ] );
 				}
 			} else
 			{
