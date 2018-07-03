@@ -2,7 +2,14 @@ class Tiara {
     static createTemplateElement(contents) {
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
-            template.content.appendChild(contents);
+            if (Object.prototype.toString.call(contents) === "[object HTMLCollection]") {
+                for (let i = 0; i < contents.length; ++i) {
+                    template.content.appendChild(contents[i]);
+                }
+            }
+            else {
+                template.content.appendChild(contents);
+            }
             return template;
         }
         const parent = document.createElement('div');

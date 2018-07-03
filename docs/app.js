@@ -2,14 +2,22 @@ class Tiara {
     static createTemplateElement(contents) {
         const template = document.createElement('template');
         if (typeof contents !== 'string') {
-            template.content.appendChild(contents);
+            if (Object.prototype.toString.call(contents) === "[object HTMLCollection]") {
+                for (let i = 0; i < contents.length; ++i) {
+                    template.content.appendChild(contents[i]);
+                }
+            }
+            else {
+                template.content.appendChild(contents);
+            }
             return template;
         }
         const parent = document.createElement('div');
         parent.innerHTML = contents;
         const children = parent.children;
-        for (let i = 0; i < children.length; ++i) {
-            template.content.appendChild(children[i]);
+        const length = children.length;
+        for (let i = 0; i < length; ++i) {
+            template.content.appendChild(children[0]);
         }
         return template;
     }

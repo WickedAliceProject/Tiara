@@ -1,6 +1,6 @@
 declare class Tiara {
-    static createTemplateElement(contents: HTMLElement | string): HTMLTemplateElement;
-    static create(contents: HTMLElement | string): Tiara;
+    static createTemplateElement(contents: HTMLElement | HTMLCollection | string): HTMLTemplateElement;
+    static create(contents: HTMLElement | HTMLCollection | string): Tiara;
     protected template: HTMLTemplateElement;
     constructor(template?: HTMLTemplateElement | string);
     protected defaultTemplate(): HTMLTemplateElement;

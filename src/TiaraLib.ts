@@ -1,13 +1,22 @@
 class Tiara
 {
 
-	public static createTemplateElement( contents: HTMLElement | string )
+	public static createTemplateElement( contents: HTMLElement | HTMLCollection | string )
 	{
 		const template = document.createElement( 'template' );
 
 		if ( typeof contents !== 'string' )
 		{
-			template.content.appendChild( contents );
+			if ( Object.prototype.toString.call( contents ) === "[object HTMLCollection]" )
+			{
+				for ( let i = 0 ; i < (<HTMLCollection>contents).length ; ++i )
+				{
+					template.content.appendChild( (<HTMLCollection>contents)[ i ] );
+				}
+			} else
+			{
+				template.content.appendChild( <HTMLElement>contents );
+			}
 			return template;
 		}
 
@@ -23,7 +32,7 @@ class Tiara
 		return template;
 	}
 
-	public static create( contents: HTMLElement | string )
+	public static create( contents: HTMLElement | HTMLCollection | string )
 	{
 		return new Tiara( this.createTemplateElement( contents ) );
 	}
